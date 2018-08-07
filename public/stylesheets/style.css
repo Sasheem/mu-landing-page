@@ -2,11 +2,10 @@ body {
   background-color: #eee;
   margin: 0;
   padding: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 #page-wrapper {
   position: relative;
-  display: block;
 }
 h1 {
   text-align: center;
@@ -34,9 +33,11 @@ li {
   align-items: center;
   min-height: 75px;
   padding: 0 20px;
+  background-color: #eee;
 }
 #logo-div {
-  width: 50vw;
+  width: 40vw;
+  /* background-color: blue; */
 }
 #header-img {
   display: inline-block;
@@ -54,9 +55,10 @@ li {
   color: #7c7c7c;
 }
 #main-nav {
+  width: 55vw;
   display: flex !important;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 #main-nav li {
   text-align: center;
@@ -136,16 +138,18 @@ li {
   align-items: center;
   text-align: center;
   width: calc(100% / 3);
-  height: 100px;
   margin: 10px;
+  padding: 1px;
   border: 2px solid #000;
   border-radius: 3px;
-  max-height: 500px;
-  height: 100%;
 }
 .tier-card li {
   padding: 5px;
   margin-right: 25px;
+}
+.tier-card ol {
+  margin: 15px 0;
+  height: 50%;
 }
 .tier-title {
   background-color: #ddd;
@@ -174,4 +178,33 @@ li {
   justify-content: flex-end;
   font-size: 0.9em;
   color: #444;
+}
+
+/* Media Qeuries */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+  }
+  #logo-div {
+    width: 40vw;
+  }
+  #main-nav {
+    width: 60vw;
+  }
+  #tier-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  #nav-bar {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
 }
